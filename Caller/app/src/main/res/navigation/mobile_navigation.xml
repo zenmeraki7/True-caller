@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_callog">
+
+    <fragment
+        android:id="@+id/navigation_callog"
+        android:name="com.example.caller.ui.callog.CallogFragment"
+        android:label="@string/title_callog"
+        tools:layout="@layout/fragment_callog" />
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.example.caller.ui.messages.MessagesFragment"
+        android:label="@string/title_messages"
+        tools:layout="@layout/fragment_messages" />
+
+
+
+    <fragment
+        android:id="@+id/navigation_blocked"
+        android:name="com.example.caller.ui.blocked.BlockedFragment"
+        android:label="@string/title_blocked"
+        tools:layout="@layout/fragment_blocked" />
+
+    <fragment
+        android:id="@+id/navigation_premium"
+        android:name="com.example.caller.ui.blocked.BlockedFragment"
+        android:label="@string/title_premium"
+        tools:layout="@layout/fragment_premium" />
+
+    <fragment
+        android:id="@+id/navigation_assistant"
+        android:name="com.example.caller.ui.blocked.BlockedFragment"
+        android:label="@string/title_assistant"
+        tools:layout="@layout/fragment_assistant" />
+</navigation>

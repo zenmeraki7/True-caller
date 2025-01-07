@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Search"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:background="@drawable/rounded_edittext"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:padding="12dp"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnlist"
+        android:layout_below="@id/searchBar"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnContactList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/oval_button"
+            android:drawableTop="@drawable/ic_contacts"
+            android:drawablePadding="8dp"
+            android:padding="7dp"
+            android:layout_marginBottom="10dp"
+            android:text="Contacts"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="normal"
+            android:drawableTint="@color/white"
+            android:elevation="4dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView for Call Logs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCallLog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnlist"
+        android:layout_alignParentBottom="true"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:scrollbars="vertical" />
+
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/ic_call"
+        app:backgroundTint="@color/primary_blue"
+        app:elevation="6dp"
+        app:tint="@android:color/white"
+        tools:ignore="MissingConstraints" />
+</RelativeLayout>

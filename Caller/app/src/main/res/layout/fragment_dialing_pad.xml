@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.DayNight"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Editable Number Display -->
+    <EditText
+        android:id="@+id/number_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter number"
+        android:textSize="18sp"
+        android:inputType="phone"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:gravity="center"
+        android:focusable="false"
+        android:clickable="false"
+        android:textColor="#000000"
+        android:textColorHint="#808080"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Dialpad Buttons -->
+    <GridLayout
+        android:id="@+id/dialpad_grid1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_marginBottom="24dp">
+
+        <!-- Buttons 1-9 -->
+        <Button
+            android:text="1"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="2"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="3"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="4"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="5"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="6"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="7"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="8"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="9"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="*"
+            style="@style/DialpadButtonStyle" />
+        <Button
+            android:text="0"
+            style="@style/DialpadButtonStyle" />
+
+        <Button
+            android:text="#"
+            style="@style/DialpadButtonStyle" />
+
+        <Button
+            android:text="Clear"
+            style="@style/DialpadButtonStyle"
+            android:layout_columnSpan="3"
+            android:backgroundTint="#FF5733"
+            android:textColor="#FFFFFF" />
+
+<!--        <ImageButton-->
+<!--            android:src="@drawable/ic_backspace"-->
+<!--            style="@style/DialpadButtonStyle"-->
+<!--            android:layout_columnSpan="1"-->
+<!--            android:textColor="#FFFFFF" />-->
+    </GridLayout>
+
+    <!-- Call Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/call_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/ic_call"
+        app:backgroundTint="@color/primary_blue"
+        app:elevation="6dp"
+        app:tint="@android:color/white"
+        tools:ignore="MissingConstraints" />
+</LinearLayout>
